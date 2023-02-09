@@ -6,5 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Zmyshenko';
+  name = 'Timofey';
+  surname = 'Frolov';
+  patronymic = 'SerGAYevich';
+  birthDate = new Date(1998, 9, 25);
+  age = 24;
+  nameOfSchool = "OAO RZD School-internat №25";
+  nameOfCollege = "SFU IMIFI";
+  startSchool = new Date(2006, 8, 1);
+  endSchool = new Date(2016, 8, 1);
+  startCollege = new Date(2016, 8, 1);
+  endCollege = new Date(2023, 1, 1);
+  schoolPath = `${this.nameOfSchool}: from ${this.startSchool} to ${this.endSchool}`;
+  collegePath = `${this.nameOfCollege}: from ${this.startCollege} to ${this.endCollege}`;
+
+  ageIncrement() {
+    this.age++;
+  }
+
+  ageDecrement() {
+    this.age--;
+  }
+
+  reset() {
+    this.age = 24;
+  }
+
 }
