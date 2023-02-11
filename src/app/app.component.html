@@ -12,14 +12,14 @@
       <div>{{ patronymic }}</div>
     </div>
 
-    <div class="p-5">Birth date: {{ birthDate }}</div>
+    <div class="p-5">Birth date: {{ birthDate | date }}</div>
 
     <div class="p-5">Age: {{ age }}</div>
 
     <div class="p-5">
       <div>Live Path:</div>
-      <div>School: {{ schoolPath }}</div>
-      <div>College: {{ collegePath }}</div>
+      <div>School: {{ schoolName }}: from {{ startSchool | date }} to {{ endSchool | date }}</div>
+      <div>College: {{ collegeName }}: from {{ startCollege | date }} to {{ endCollege | date }} </div>
     </div>
 
     <div class="flex gap-4 flex-col p-5 max-w-xxs">

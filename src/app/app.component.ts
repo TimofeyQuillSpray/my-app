@@ -3,7 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  template: `
+  <div>Birth date: {{ birthDate | date }}</div>
+  <div>School: {{ schoolName }} : from {{ startSchool | date }} to {{ endSchool | date }}</div>
+  <div>College: {{ collegeName }} : from {{ startCollege | date }} to {{ endCollege | date }} </div>
+  `,
 })
 export class AppComponent {
   title = 'Zmyshenko';
@@ -12,21 +17,21 @@ export class AppComponent {
   patronymic = 'SerGAYevich';
   birthDate = new Date(1998, 9, 25);
   age = 24;
-  nameOfSchool = "OAO RZD School-internat №25";
-  nameOfCollege = "SFU IMIFI";
+  schoolName = "OAO RZD School-internat №25";
+  collegeName = "SFU IMIFI";
   startSchool = new Date(2006, 8, 1);
   endSchool = new Date(2016, 8, 1);
   startCollege = new Date(2016, 8, 1);
-  endCollege = new Date(2023, 1, 1);
-  schoolPath = `${this.nameOfSchool}: from ${this.startSchool} to ${this.endSchool}`;
-  collegePath = `${this.nameOfCollege}: from ${this.startCollege} to ${this.endCollege}`;
+  endCollege = new Date(2023, 0, 1);
+  schoolPath = `${this.schoolName}: from ${this.startSchool} to ${this.endSchool}`;
+  collegePath = `${this.collegeName}: from ${this.startCollege} to ${this.endCollege}`;
 
   ageIncrement() {
-    this.age++;
+    this.age = this.age + 1;
   }
 
   ageDecrement() {
-    this.age--;
+    this.age = this.age - 1;
   }
 
   reset() {
