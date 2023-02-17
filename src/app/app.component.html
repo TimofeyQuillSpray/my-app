@@ -22,7 +22,7 @@
       <div>College: {{ collegePath }}</div>
     </div>
 
-    <div class="flex gap-4 flex-col p-5 max-w-xxs">
+    <div class="flex max-w-xxs flex-col gap-4 p-5">
       <button
         class="text-bold rounded-lg bg-blue-300 hover:bg-blue-800 hover:text-white"
         (click)="ageIncrement()"
@@ -43,6 +43,19 @@
       >
         Reset Age
       </button>
+
+      <!-- <button
+        class="text-bold rounded-lg bg-yellow-400 hover:bg-blue-800 hover:text-white"
+        (click)="newChip()"
+      >Add element</button> -->
+
+      <app-chips
+      class="bg-yellow-400"
+      (closeIconClicked)="removeChip($event)"
+      >
+      </app-chips>
+      
+      
     </div>
   </body>
 </html>
