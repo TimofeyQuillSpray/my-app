@@ -7,8 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChipsComponent {
   
-  @Input() text = '';
-  @Input() chips: string[] = ['chip1', 'chip2', 'chip3', 'chip4'];
+  @Input() chips: string[] = [];
 
   @Output() closeIconClicked = new EventEmitter<string>();
 

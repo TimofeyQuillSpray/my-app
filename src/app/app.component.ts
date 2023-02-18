@@ -23,6 +23,9 @@ export class AppComponent {
   schoolPath = `${this.nameOfSchool}: from ${this.startSchool} to ${this.endSchool}`;
   collegePath = `${this.nameOfCollege}: from ${this.startCollege} to ${this.endCollege}`;
 
+  myArr: string[] = [];
+  currentArrIndex = 0;
+
   ageIncrement() {
     this.age++;
   }
@@ -35,8 +38,13 @@ export class AppComponent {
     this.age = 24;
   }
 
+  newChip() {
+    this.myArr.push('chip');
+  }
+
   removeChip(clickedElement: string) {
-    
+    this.currentArrIndex = this.myArr.indexOf(clickedElement);
+    this.myArr.splice(this.currentArrIndex, 1);
   }
 
 }
