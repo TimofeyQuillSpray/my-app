@@ -44,10 +44,12 @@
         Reset Age
       </button>
 
-      <button
-        class="text-bold rounded-lg bg-yellow-400 hover:bg-blue-800 hover:text-white"
-        (click)="newChip()"
-      >Add element</button>
+      <app-input
+      (outEnterName)="newChip($event)"
+      >
+      </app-input>
+
+      
 
       <app-chips
       class="flex gap-4 flex-row"

@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Zmyshenko';
   name = 'Timofey';
   surname = 'Frolov';
-  patronymic = 'SerGAYevich';
+  patronymic = 'Sergeeevich';
   birthDate = new Date(1998, 9, 25);
   age = 24;
   nameOfSchool = "OAO RZD School-internat №25";
@@ -38,13 +38,13 @@ export class AppComponent {
     this.age = 24;
   }
 
-  newChip() {
-    this.myArr.push('chip');
-  }
-
   removeChip(clickedElement: string) {
     this.currentArrIndex = this.myArr.indexOf(clickedElement);
     this.myArr.splice(this.currentArrIndex, 1);
+  }
+
+  newChip(enterredName: string) {
+    this.myArr.push(enterredName);
   }
 
 }
