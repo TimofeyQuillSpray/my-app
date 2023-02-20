@@ -12,17 +12,25 @@
       <div>{{ patronymic }}</div>
     </div>
 
-    <div class="p-5">Birth date: {{ birthDate | date }}</div>
+    <div class="p-5">Birth date: {{ birthDate | date : "dd.MM.yyyy" }}</div>
 
     <div class="p-5">Age: {{ age }}</div>
 
     <div class="p-5">
       <div>Live Path:</div>
-      <div>School: {{ schoolName }}: from {{ startSchool | date }} to {{ endSchool | date }}</div>
-      <div>College: {{ collegeName }}: from {{ startCollege | date }} to {{ endCollege | date }} </div>
+      <div>
+        School: {{ schoolName }}: from
+        {{ startSchool | date : "dd.MM.yyyy" }} to
+        {{ endSchool | date : "dd.MM.yyyy" }}
+      </div>
+      <div>
+        College: {{ collegeName }}: from
+        {{ startCollege | date : "dd.MM.yyyy" }} to
+        {{ endCollege | date : "dd.MM.yyyy" }}
+      </div>
     </div>
 
-    <div class="flex gap-4 flex-col p-5 max-w-xxs">
+    <div class="flex max-w-xxs flex-col gap-4 p-5">
       <button
         class="text-bold rounded-lg bg-blue-300 hover:bg-blue-800 hover:text-white"
         (click)="ageIncrement()"

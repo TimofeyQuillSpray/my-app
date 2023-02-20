@@ -4,11 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  template: `
-  <div>Birth date: {{ birthDate | date }}</div>
-  <div>School: {{ schoolName }} : from {{ startSchool | date }} to {{ endSchool | date }}</div>
-  <div>College: {{ collegeName }} : from {{ startCollege | date }} to {{ endCollege | date }} </div>
-  `,
 })
 export class AppComponent {
   title = 'Zmyshenko';
