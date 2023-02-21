@@ -6,10 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
-  @Output() outEnterName = new EventEmitter<string>();
+  @Output() inputTextChange = new EventEmitter<string>();
 
-  enterName(nameInput: HTMLInputElement) {
-    this.outEnterName.emit(nameInput.value);
+  inputName(nameInput: HTMLInputElement) {
+    this.inputTextChange.emit(nameInput.value);
     nameInput.value = '';
   }
 }
