@@ -1,0 +1,9 @@
+<div
+  *ngFor="let chip of chips"
+  class="py-auto px-auto flex flex-row rounded-2xl bg-gray-200 pl-2.5 pr-2.5 pt-1 pb-1"
+>
+  <span class="pb-0.5 text-base">{{ chip }}</span>
+  <button class="pl-2" (click)="onRemove.emit(chip)">
+    <fa-icon [icon]="faCircleXmark"></fa-icon>
+  </button>
+</div>
