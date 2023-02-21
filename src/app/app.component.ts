@@ -5,7 +5,6 @@ import { ChipsComponent } from './chips/chips.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'Zmyshenko';
