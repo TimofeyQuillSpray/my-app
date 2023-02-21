@@ -1,13 +1,9 @@
 <div
-*ngFor="let chip of chips"
-[style.border]="'1px solid black'"
-[style.padding]="'0.5rem'"
-[style.border-radius]="'12px'"
-[style.background-color]="'grey'"
->{{chip}}
-<button
-(click)="closeIconClicked.emit(chip)"
+  *ngFor="let chip of chips"
+  class="py-auto px-auto flex flex-row rounded-2xl bg-gray-200 pl-2.5 pr-2.5 pt-1 pb-1"
 >
-<img src="/Angular/my-app/src/assets/images/unnamed.jpg">
-</button>
+  <span class="pb-0.5 text-base">{{ chip }}</span>
+  <button class="pl-2" (click)="closeIconClicked.emit(chip)">
+    <fa-icon [icon]="faCircleXmark"></fa-icon>
+  </button>
 </div>

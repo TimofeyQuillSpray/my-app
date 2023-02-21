@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Zmyshenko';
   name = 'Timofey';
   surname = 'Frolov';
-  patronymic = 'Sergeeevich';
+  patronymic = 'Sergeyevich';
   birthDate = new Date(1998, 9, 25);
   age = 24;
   nameOfSchool = "OAO RZD School-internat №25";

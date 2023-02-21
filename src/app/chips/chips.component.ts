@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chips',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./chips.component.css']
 })
 export class ChipsComponent {
+
+  faCircleXmark = faCircleXmark
   
   @Input() chips: string[] = [];
 
