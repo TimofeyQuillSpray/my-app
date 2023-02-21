@@ -4,18 +4,17 @@ import { ChipsComponent } from './chips/chips.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  
   title = 'Zmyshenko';
   name = 'Timofey';
   surname = 'Frolov';
   patronymic = 'Sergeyevich';
   birthDate = new Date(1998, 9, 25);
   age = 24;
-  nameOfSchool = "OAO RZD School-internat №25";
-  nameOfCollege = "SFU IMIFI";
+  nameOfSchool = 'OAO RZD School-internat №25';
+  nameOfCollege = 'SFU IMIFI';
   startSchool = new Date(2006, 8, 1);
   endSchool = new Date(2016, 8, 1);
   startCollege = new Date(2016, 8, 1);
@@ -24,7 +23,6 @@ export class AppComponent {
   collegePath = `${this.nameOfCollege}: from ${this.startCollege} to ${this.endCollege}`;
 
   myArr: string[] = [];
-  currentArrIndex = 0;
 
   ageIncrement() {
     this.age++;
@@ -39,12 +37,11 @@ export class AppComponent {
   }
 
   removeChip(clickedElement: string) {
-    this.currentArrIndex = this.myArr.indexOf(clickedElement);
-    this.myArr.splice(this.currentArrIndex, 1);
+    const currentArrIndex = this.myArr.indexOf(clickedElement);
+    this.myArr.splice(currentArrIndex, 1);
   }
 
-  newChip(enterredName: string) {
+  onInput(enterredName: string) {
     this.myArr.push(enterredName);
   }
-
 }

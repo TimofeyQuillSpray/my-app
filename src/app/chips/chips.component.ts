@@ -4,14 +4,12 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-chips',
   templateUrl: './chips.component.html',
-  styleUrls: ['./chips.component.css']
+  styleUrls: ['./chips.component.css'],
 })
 export class ChipsComponent {
+  faCircleXmark = faCircleXmark;
 
-  faCircleXmark = faCircleXmark
-  
   @Input() chips: string[] = [];
 
-  @Output() closeIconClicked = new EventEmitter<string>();
-
+  @Output() onRemove = new EventEmitter<string>();
 }
