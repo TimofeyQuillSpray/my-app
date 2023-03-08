@@ -6,60 +6,11 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    <div class="flex flex-row justify-center gap-8 text-2xl">
-      <div>{{ name }}</div>
-      <div>{{ surname }}</div>
-      <div>{{ patronymic }}</div>
-    </div>
-
-    <div class="p-5">Birth date: {{ birthDate | date : "dd.MM.yyyy" }}</div>
-
-    <div class="p-5">Age: {{ age }}</div>
-
-    <div class="p-5">
-      <div>Live Path:</div>
-      <div>
-        School: {{ schoolName }}: from
-        {{ startSchool | date : "dd.MM.yyyy" }} to
-        {{ endSchool | date : "dd.MM.yyyy" }}
-      </div>
-      <div>
-        College: {{ collegeName }}: from
-        {{ startCollege | date : "dd.MM.yyyy" }} to
-        {{ endCollege | date : "dd.MM.yyyy" }}
-      </div>
-    </div>
-
-    <div class="flex max-w-xxs flex-col gap-4 p-5">
-      <button
-        class="rounded bg-blue-500 py-2 px-4 text-white hover:bg-blue-700"
-        (click)="ageIncrement()"
-      >
-        Increase age
-      </button>
-
-      <button
-        class="rounded bg-blue-500 py-2 px-4 text-white hover:bg-blue-700"
-        (click)="ageDecrement()"
-      >
-        Decrease age
-      </button>
-
-      <button
-        class="rounded bg-blue-500 py-2 px-4 text-white hover:bg-blue-700"
-        (click)="reset()"
-      >
-        Reset Age
-      </button>
-
-      <app-input (inputTextChange)="onInput($event)"> </app-input>
-
-      <app-chips
-        class="flex flex-row gap-1.5"
-        (onRemove)="removeChip($event)"
-        [chips]="myArr"
-      >
-      </app-chips>
-    </div>
+    <nav class="flex justify-center gap-8 text-2xl">
+      <a routerLink="">Home</a>
+      <a routerLink="/product-create-page">Product Create Page</a>
+      <a routerLink="/junk">Junk</a>
+    </nav>
+    <router-outlet></router-outlet>
   </body>
 </html>
